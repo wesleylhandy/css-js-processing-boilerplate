@@ -70,16 +70,15 @@ I have added support for the last two versions of each browser and any browser w
     package.json
     postcss.config.js
     -- client
-        -- transpiled
-            -- css
-                index.min.css
-            -- js
-                index.min.js
+        -- processed # temporary folder, for holding files prior to concatenization
         -- public
             index.html
             ... other html pages
-            -- css
-            -- js
+            -- dist
+                -- css
+                    index.min.css
+                -- js
+                    index.min.js
         -- src
             -- css
             -- js

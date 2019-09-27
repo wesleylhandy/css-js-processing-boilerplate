@@ -1,0 +1,29 @@
+{
+    "plugins": [
+      [
+        "@babel/plugin-proposal-class-properties",
+        {
+          "loose": true
+        }
+      ],
+      [
+        "transform-inline-environment-variables", {
+          "include": [
+            "NODE_ENV"
+          ]
+        }
+      ]
+    ],
+    "presets": [
+      [
+        "@babel/preset-env", 
+        { 
+          "useBuiltIns": "entry", 
+          "corejs": 3, 
+          "targets": { 
+            "node": "current" 
+          } 
+        }
+      ]
+    ]
+  }

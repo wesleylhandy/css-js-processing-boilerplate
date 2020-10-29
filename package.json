@@ -7,17 +7,21 @@
   "license": "MIT",
   "private": false,
   "scripts": {
+    "scss-build-task:watch": "sass --watch client/src/scss/style.scss client/src/css/scss-styles.css",
     "css-build-task:postcss": "postcss client/src/css/*.css --use postcss-preset-env cssnano -d client/processed/css/ ",
     "css-build-task:concat-css": "cat client/processed/css/*.css > client/public/dist/css/index.min.css",
     "js-build-task:babel": "babel client/src/js -d client/processed/js --presets=@babel/preset-env",
     "js-build-task:concat-js": "cat client/processed/js/*.js > client/processed/js/all.js",
     "js-build-task:uglify-js": "uglifyjs client/processed/js/all.js -o client/public/dist/js/index.min.js -c -m",
     "tools:buildjs": "npm-run-all -s js-build-task:*",
+    "tools:buildscss": "npm-run-all -s scss-build-task:*",
     "tools:buildcss": "npm-run-all -s css-build-task:*",
     "tools:jswatch": "chokidar 'client/src/js/*.js' -c 'npm run tools:buildjs'",
     "tools:csswatch": "chokidar 'client/src/css/*.css' -c 'npm run tools:buildcss'",
     "tools:browser-sync": "browser-sync start -s 'client/public' --files 'client/public/dist/css/*.css' 'client/public/dist/js/*.js'",
-    "dev": "npm-run-all -p tools:*"
+    "dev": "npm-run-all -p tools:*",
+    "dev:parcel": "parcel client/public/index.html",
+    "build": "parcel build client/public/index.html"
   },
   "keywords": [
     "postcss",
@@ -25,12 +29,15 @@
     "babel",
     "post-processing",
     "JavaScript",
-    "CSS"
+    "CSS",
+    "SCSS"
   ],
   "devDependencies": {
     "@babel/cli": "^7.6.2",
     "@babel/core": "^7.6.2",
     "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/plugin-transform-regenerator": "^7.10.1",
+    "@babel/plugin-transform-runtime": "^7.10.1",
     "@babel/preset-env": "^7.6.2",
     "autoprefixer": "^9.6.1",
     "babel-plugin-transform-inline-environment-variables": "^0.4.3",
@@ -42,6 +49,12 @@
     "postcss-cli": "^6.1.3",
     "postcss-normalize": "^8.0.1",
     "postcss-preset-env": "^6.7.0",
+    "postcss-sass": "^0.4.4",
+    "sass": "^1.27.1",
     "uglify-js": "^3.6.0"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.10.2",
+    "parcel-bundler": "^1.12.4"
   }
 }

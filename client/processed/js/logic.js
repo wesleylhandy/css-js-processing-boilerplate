@@ -1,8 +1,10 @@
 "use strict";
 
-var _console$log;
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+var _defineProperty2 = _interopRequireDefault(require("@babel/runtime/helpers/defineProperty"));
+
+var _console$log;
 
 var fruits = ['apples', 'oranges', 'bananas'];
 var veggies = ['carrots', 'celery', 'lettuce'];
@@ -26,6 +28,6 @@ var GetGroceries = ToDos.GetGroceries,
 } : _ToDos$GetDinner;
 console.log((_console$log = {
   GetGroceries: GetGroceries
-}, _defineProperty(_console$log, "GetGroceries", GetGroceries), _defineProperty(_console$log, "GetDinner", GetDinner), _console$log));
+}, (0, _defineProperty2.default)(_console$log, "GetGroceries", GetGroceries), (0, _defineProperty2.default)(_console$log, "GetDinner", GetDinner), _console$log));
 console.log(window.location.href);
 console.log("Syncing...");

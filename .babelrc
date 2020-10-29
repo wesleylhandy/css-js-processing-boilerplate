@@ -12,7 +12,9 @@
             "NODE_ENV"
           ]
         }
-      ]
+      ],
+      ["@babel/plugin-transform-regenerator"],
+      ["@babel/plugin-transform-runtime"]
     ],
     "presets": [
       [
@@ -21,8 +23,14 @@
           "useBuiltIns": "entry", 
           "corejs": 3, 
           "targets": { 
+            "browsers" : [
+              "last 2 versions",
+              "> 0.5%",
+              "IE 11"
+            ],
             "node": "current" 
-          } 
+          },
+          "modules" : "commonjs"
         }
       ]
     ]

@@ -1,8 +1,10 @@
 "use strict";
 
-function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+var _regenerator = _interopRequireDefault(require("@babel/runtime/regenerator"));
+
+var _asyncToGenerator2 = _interopRequireDefault(require("@babel/runtime/helpers/asyncToGenerator"));
 
 /**
  * Asynchronous function
@@ -22,13 +24,11 @@ function callApi(_x) {
 
 
 function _callApi() {
-  _callApi = _asyncToGenerator(
-  /*#__PURE__*/
-  regeneratorRuntime.mark(function _callee(uri) {
+  _callApi = (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee(uri) {
     var options,
         data,
         _args = arguments;
-    return regeneratorRuntime.wrap(function _callee$(_context) {
+    return _regenerator.default.wrap(function _callee$(_context) {
       while (1) {
         switch (_context.prev = _context.next) {
           case 0:
@@ -71,14 +71,12 @@ function loadData(_x2) {
 }
 
 function _loadData() {
-  _loadData = _asyncToGenerator(
-  /*#__PURE__*/
-  regeneratorRuntime.mark(function _callee2(uri) {
+  _loadData = (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee2(uri) {
     var options,
         response,
         contentType,
         _args2 = arguments;
-    return regeneratorRuntime.wrap(function _callee2$(_context2) {
+    return _regenerator.default.wrap(function _callee2$(_context2) {
       while (1) {
         switch (_context2.prev = _context2.next) {
           case 0:
@@ -129,13 +127,11 @@ function getErrorBody(_x3) {
 }
 
 function _getErrorBody() {
-  _getErrorBody = _asyncToGenerator(
-  /*#__PURE__*/
-  regeneratorRuntime.mark(function _callee3(response) {
+  _getErrorBody = (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee3(response) {
     var contentType,
         body,
         _args3 = arguments;
-    return regeneratorRuntime.wrap(function _callee3$(_context3) {
+    return _regenerator.default.wrap(function _callee3$(_context3) {
       while (1) {
         switch (_context3.prev = _context3.next) {
           case 0:
@@ -189,9 +185,11 @@ function getQueryVariable(variable) {
   return "";
 }"use strict";
 
-var _console$log;
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+var _defineProperty2 = _interopRequireDefault(require("@babel/runtime/helpers/defineProperty"));
+
+var _console$log;
 
 var fruits = ['apples', 'oranges', 'bananas'];
 var veggies = ['carrots', 'celery', 'lettuce'];
@@ -215,7 +213,7 @@ var GetGroceries = ToDos.GetGroceries,
 } : _ToDos$GetDinner;
 console.log((_console$log = {
   GetGroceries: GetGroceries
-}, _defineProperty(_console$log, "GetGroceries", GetGroceries), _defineProperty(_console$log, "GetDinner", GetDinner), _console$log));
+}, (0, _defineProperty2.default)(_console$log, "GetGroceries", GetGroceries), (0, _defineProperty2.default)(_console$log, "GetDinner", GetDinner), _console$log));
 console.log(window.location.href);
 console.log("Syncing...");"use strict";
 

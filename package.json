@@ -55,5 +55,8 @@
     "sass": "^1.27.2",
     "uglify-js": "^3.11.4"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "resolutions": {
+    "node-forge": "0.10.0"
+  }
 }

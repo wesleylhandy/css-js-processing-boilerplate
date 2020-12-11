@@ -7,6 +7,7 @@
   "license": "MIT",
   "private": false,
   "scripts": {
+    "build-scss:nowatch": "sass --no-source-map src/scss/style.scss src/css/scss-styles.css",
     "scss-build-task:watch": "sass --watch client/src/scss/style.scss client/src/css/scss-styles.css",
     "css-build-task:postcss": "postcss client/src/css/*.css --use postcss-preset-env cssnano -d client/processed/css/ ",
     "css-build-task:concat-css": "cat client/processed/css/*.css > client/public/dist/css/index.min.css",
@@ -30,7 +31,8 @@
     "post-processing",
     "JavaScript",
     "CSS",
-    "SCSS"
+    "SCSS",
+    "bootstrap"
   ],
   "devDependencies": {
     "@babel/cli": "^7.12.1",
